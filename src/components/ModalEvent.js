@@ -58,18 +58,18 @@ const ModalEvent = ({ hideModal, currentDay, events }) => (
               size="large"
               color="calendar-modal-text"
             >
-              {event.eventName}
+              {event.emailAddress}
             </Text>
 
-            {event.place && (
+            {event.kind && (
               <Text a11yTitle="Event place" color="calendar-modal-text">
-                {event.place}
+                {event.kind}
               </Text>
             )}
 
             <Box margin={{ top: 'medium' }} width="xsmall">
               <Button
-                href={event.eventLink}
+                href={event.timestamp}
                 label="Link"
                 a11yTitle="Event link"
                 target="_blank"

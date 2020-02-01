@@ -11,14 +11,15 @@ import ConfigContext from '../components/ConfigContext'
 // override this query with your own questions!
 const SPREADSHEET_QUERY = graphql`
   query eventsQuery {
-    allGoogleSheetEventsRow {
+    allGoogleSheetAppointmentRow {
       edges {
         node {
           id
-          eventName: whatisthename
-          date: when
-          place: where
-          eventLink: linktotheevent
+          timestamp
+          appointmentTime
+          emailAddress
+          kind
+          date: appointmentDate
         }
       }
     }
